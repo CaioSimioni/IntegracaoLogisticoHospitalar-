@@ -1,0 +1,115 @@
+{% extends 'basic_page.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+  {% block style %}
+  <style>
+    .container {
+      width: max-content;
+      height: auto;
+      padding: 20px;
+      border-radius: 4px;
+      background: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-direction: column;
+    }
+    #container-box {
+      width: 100%;
+      margin: 0;
+      background: var(--color1);
+    }
+    .title {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: black;
+    }
+    #inputs {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .input-box {
+      width: 70%;
+      height: auto;
+      padding: 5px;
+      
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      
+    }
+    .input {
+      background: transparent;
+      outline: none;
+      width: 100%;
+      border: none;
+      font-size: 1em;
+      color: black;
+    }
+    .svg {
+      fill: black;
+      color: black;
+    }
+    .btn {
+      width: 60%;
+      height: auto;
+      padding: 10px 5px;
+      border: 1px solid black;
+      border-radius: 4px;
+      background: transparent;
+      color: black;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 200ms ease-in;
+    }
+    .btn:hover {
+      background: black;
+      color: white;
+    }
+    
+    #togglePassword {
+      cursor: pointer;
+    }
+  </style>
+  {% endblock %}
+  {% block sidebar %}
+  {% endblock %}
+  {% block content %}
+  <form class="container" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <p class="title">Integração Logístico Hospitalar</p>
+    <div id="inputs">
+      <div class="input-box">
+        <span class="material-symbols-rounded svg">person</span>
+        <input placeholder="Usuário" type="text" class="input" name="username">
+      </div>
+      <div class="input-box">
+        <span class="material-symbols-rounded svg">lock</span>
+        <input placeholder="Senha" type="password" id="inputPassword" class="input" name="password">
+        <span class="material-symbols-rounded svg" id="togglePassword">visibility_off</span>
+      </div>
+    </div>
+    <button type="submit" class="btn">Acessar</button>
+  </form>
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('inputPassword');
+    togglePassword.addEventListener('click', function () {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      this.innerHTML = type === 'password' ? '<span class="material-symbols-rounded svg" id="togglePassword">visibility_off</span>' : '<span class="material-symbols-rounded svg" id="togglePassword">visibility</span>';
+    });
+  </script>
+{% endblock %}
+

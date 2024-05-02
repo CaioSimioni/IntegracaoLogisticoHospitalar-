@@ -1,0 +1,144 @@
+#box-cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+.card {
+  width: max-content;
+  padding: 10px;
+  background: red;
+  color: white;
+  fill: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 200ms ease;
+}
+.blue {
+  background: rgb(36, 98, 242);
+}
+.green {
+  background: rgb(39, 181, 51);
+}
+.orange {
+  background: rgb(255, 116, 30);
+}
+.blue:hover {
+  background: rgb(30, 79, 194);
+}
+.green:hover {
+  background: rgb(30, 141, 39);
+}
+.orange:hover {
+  background: rgb(198, 91, 24);
+}
+
+#main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.form {
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid rgb(197, 197, 197);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+}
+.form h1 {
+  color: rgb(37, 37, 37);
+}
+#inputs {
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.input-box {
+  width: 100%;
+  height: auto;
+  color: rgb(37, 37, 37);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  ;
+}
+.input-box p {
+  font-weight: bold;
+  margin-left: 5px;
+}
+.input {
+  width: 100%;
+  padding: 5px 15px;
+  border: 2px solid rgb(197, 197, 197);
+  border-radius: 4px;
+  outline: none;
+  color: rgb(37, 37, 37);
+  font-size: 1em;
+}
+.multiples-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.multiples-input .G-P-input:nth-child(1) {
+  border: 2px solid red;
+}
+
+.G-P-input {
+  display: flex;
+  align-items: flex-start;
+}
+.G-input {
+  width: 75%
+}
+.P-input {
+  width: 25%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#input-checkbox {
+  display: none;
+}
+
+.btn {
+  width: 40%;
+  height: auto;
+  padding: 10px;
+  border-radius: 4px;
+  background: rgb(39, 181, 51);
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.btn:hover {
+  background: rgb(30, 141, 39);
+}
+

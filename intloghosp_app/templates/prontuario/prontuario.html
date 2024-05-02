@@ -1,0 +1,41 @@
+{% extends 'basic_page.html' %}
+{% block style %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_components.css' %}">
+{% endblock %}
+
+
+{% block title %}
+  <title>Prontuario</title>
+{% endblock %}
+
+{% block content %}
+  {% block paciente_buttons %}
+    <div id="box-cards">
+      <a href="" class="card blue">
+        <span class="material-symbols-rounded svg">search</span>
+        Buscar Prontuário
+      </a>
+      <a href="{% url 'cad_prontuario' %}" class="card green">
+        <span class="material-symbols-rounded">topic</span>
+        Novo Prontuário
+      </a>
+      <a href="" class="card orange">
+        <span class="material-symbols-rounded">list</span>
+        Listar Prontuários
+      </a>
+    </div>
+  {% endblock %}
+  {% block main %}
+
+  {% endblock %}
+  <script>
+    const toggleCheckbox = document.getElementById('toggle_checkbox');
+    const inputCheckbox = document.getElementById('input-checkbox');
+    toggleCheckbox.addEventListener('click', function () {
+      const checked = inputCheckbox.checked === false ? true : false;
+      inputCheckbox.checked = checked
+      this.innerHTML = inputCheckbox.checked === true ? '<span class="material-symbols-rounded svg checkboxsvg" id="checkbox">radio_button_unchecked</span>' : '<span class="material-symbols-rounded svg checkboxsvg" id="checkbox">radio_button_checked</span>';
+    });
+  </script>
+{% endblock %}

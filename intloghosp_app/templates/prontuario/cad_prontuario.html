@@ -1,0 +1,86 @@
+{% extends 'prontuario/prontuario.html' %}
+
+{% block title %}
+<title>Cad Prontuario</title>
+{% endblock %}
+
+{% block style_main %}
+{% endblock %}
+
+
+{% block main %}
+<div id="main">
+  <form class="form" action="" method="post">
+    <h1>Cadastro de Paciente</h1>
+    
+    <div id="inputs">
+
+      <div class="input-box">
+        <p>Nome Completo</p>
+        <input type="text" name="" class="input" required>
+      </div>
+
+      <div class="multiples-input">
+        <div class="input-box">
+          <p>CPF</p>
+          <input type="text" name="" class="input" required>
+        </div>
+        <div class="input-box">
+          <p>Telefone</p>
+          <input type="text" name="" class="input" required>
+        </div>
+      </div>
+      
+      <div class="multiples-input">
+        <div class="input-box">
+          <p>Data Nascimento</p>
+          <input type="date" name="" class="input" required>
+        </div>
+        <div class="input-box">
+          <p>Indentificação</p>
+          <input type="text" name="" class="input" required>
+        </div>
+        <div class="input-box">
+          <p>RG</p>
+          <input type="text" name="" class="input" required>
+        </div>
+      </div>
+
+      <div class="multiples-input G-P-input">
+        <div class="input-box G-input">
+          <p>Endereco</p>
+          <input type="text" name="" class="input" required>
+        </div>
+        <div class="input-box P-input">
+          <p>Bairro</p>
+          <input type="text" name="" class="input" required>
+        </div>
+      </div>
+
+      <div class="multiples-input G-P-input">
+        <div class="input-box P-input">
+          <p>Numero da Casa</p>
+          <input type="text" name="" class="input" required>
+        </div>
+        <div class="input-box G-input">
+          <p>Rua</p>
+          <input type="text" name="" class="input" required>
+        </div>
+      </div>
+
+      <div class="multiples-input G-P-input">
+        <div class="input-box G-input">
+          <p>Nome da Mãe</p>
+          <input type="text" name="" class="input" required>
+        </div>
+        <div class="input-box P-input">
+          <p>Não informado</p>
+          <input type="checkbox" name="" id="input-checkbox" class="P-input">
+          <span class="material-symbols-rounded svg checkboxsvg" id="toggle_checkbox">radio_button_checked</span>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Cadastrar" class="btn"></input>
+  </form>
+</div>
+{% endblock %}

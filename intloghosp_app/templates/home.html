@@ -1,0 +1,33 @@
+{% extends 'basic_page.html' %}
+
+{% block title %}
+  <title>Home</title>
+{% endblock %}
+{% block style %}
+<style>
+
+  #span {
+    width: max-content;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  #span {
+    color: rgb(20, 20, 20, 0.4);
+    font-size: 1em;
+  }
+  #span h1{
+    color: rgba(20, 20, 20, 0.4);
+    font-size: 2.4em;
+  }
+</style>
+{% endblock %}
+{% block content %}
+<div id="span">
+  <h1>Integração Logístico Hospitalar</h1>
+  v0.0.1
+</div>
+{% endblock %}

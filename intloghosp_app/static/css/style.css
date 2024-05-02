@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+  --color1: #c30303;
+  --color2: #ba6f4d;
+  --color3: #e6cebc;
+  --color4: #a2a182;
+  --color5: #687259;
+  --color6: #f4ece2;
+}
+* {
+  font-family: 'Nunito';
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#container-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  background: var(--color6);
+}
+#sidebar {
+  width: 15%;
+  background: var(--color1);
+  height: 100%;
+  position: fixed;
+  padding: 10px;
+}
+#sidebar-items {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+}
+.item-sidebar {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  font-size: .95em;
+  font-weight: bold;
+  word-break: keep-all;
+  color: white;
+}
+.item-sidebar p {
+  margin: 0;
+}
+#sidebar-info {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#user-info {
+  
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+#info-user-privLevel {
+  font-size: .8em;
+  color: white;
+}
+#info-user-name {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+}
+#content {
+
+  width: 85%;
+  height: auto;
+  margin-left: 15%;
+  padding: 20px;
+  ;
+  
+}
+#sidebar-info a .svg {
+  fill: white;
+  color: white;
+}
